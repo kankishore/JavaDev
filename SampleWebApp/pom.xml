@@ -10,12 +10,21 @@
    
   <build>
   <plugins>
+  
+  <plugin>            
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-war-plugin</artifactId>
+  <version>2.4</version>
+  <configuration>
+    <webXml>WebContent\WEB-INF\web.xml</webXml>        
+  </configuration>
+</plugin>
   <plugin>
 		<groupId>org.apache.tomcat.maven</groupId>
-		<artifactId>tomcat8-maven-plugin</artifactId>
+		<artifactId>tomcat7-maven-plugin</artifactId>
 		<version>2.2</version>
 		<configuration>
-			<url>http://localhost:8080/manager/text</url>
+			<url>http://localhost:9090/manager/text</url>
 			<server>TomcatServer</server>
 			<path>/SampleWebApp</path>
 		</configuration>
